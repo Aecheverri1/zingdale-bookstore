@@ -1,0 +1,488 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+}
+html {
+    font-size: 62.5%;
+}
+:root {
+    --grey-color: #595959;
+    --light-green: #6eb718;
+    --dark-green: #538e0e;
+    --lemon-green: #4ba352;
+}
+.menu-logo {
+    display: block;
+    width: 120px;
+}
+.cart-icon {
+    display: block;
+    width: 30px;
+    margin: auto 5px;
+}
+.menu-container {
+    display: flex;
+    max-width: 1024px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 10px 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu-container ul {
+    list-style: none;
+    justify-self: flex-end;
+    margin-left: auto;
+}
+.menu-container ul li {
+    display: inline-block;
+    line-height: 2.5rem;
+    width: auto;
+    padding: 0 6px;
+    height: 25px;
+    margin: auto 5px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.menu-container ul li a:hover {
+    color: var(--dark-green);
+    text-shadow: var(--grey-color) 0.1px 0 0.1px;
+}
+.menu-container ul li a {
+    color: var(--grey-color);
+    font-size: 1.2rem;
+}
+.menu-container-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 8px;
+}
+/* ---------------------------------------Browser Section------------------------------------ */
+.browser-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    background-image: url('/images/hero-image-browser-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.browser-section::before {
+    position: absolute;
+    content: "";
+    background: #6eb718;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+.browser-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 600px;
+    margin: auto;
+}
+.browser-container-items h1{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 4rem;
+}
+.browser-search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    width: 550px;
+    height: 35px;
+    background-color: white;
+    border-radius: 25px;
+}
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+.browser-search-bar input {
+    width: 82%;
+    height: 80%;
+    border-style: none;
+    margin-left: 18px;
+}
+.browser-search-bar input:focus{
+    outline: none;
+}
+.browser-search-bar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+    background-color: transparent;
+    border-style: none;
+}
+.browser-container-items p {
+    display: block;
+    margin: 10px auto;
+    width: 290px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color: white;
+}
+/* ---------------------------------------Benefit Cards Section------------------------------------ */
+.card-container {
+    display: flex;
+    max-width: 1024px;
+    justify-content: center;
+    justify-items: center;
+    margin: 60px auto;
+    flex-wrap: wrap;
+}
+.card-container-item {
+    display: flex;
+    width: 25%;
+}
+.card-container-text {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.card-container-item img {
+    width: 100px;
+    height: auto;
+}
+.card-container-title {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.card-container-info {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: var(--grey-color);
+}
+.card-container-text::before {
+    position: absolute;
+    left: 0;
+    top: 43px;
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: black;
+}
+
+
+/* ---------------------------------------Placeholder Section------------------------------------ */
+
+.placeholder-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transition: all .3s;
+    transform: scale(1.0);
+}
+.placeholder-section {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.placeholder-container {
+    display: grid;
+    gap: 10px;
+    max-width: 1024px;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+.placeholder-card {
+    display: block;
+    justify-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.placeholder-card:hover .placeholder-image {
+    transform: scale(1.1);
+}
+.placeholder-text-block {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 30px;
+    color: white;
+}
+.placeholder-title {
+    font-size: 1.6rem;
+    padding: 15px 0;
+}
+.placeholder-caption {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.placeholder-text-block a {
+    color: var(--light-green);
+    font-size: 1.2rem;
+}
+/* ---------------------------------------Hero Book Section------------------------------------ */
+
+.hero-book-section {
+    width: 100%;
+    display: block;
+    background-color: rgb(248, 248, 248);
+}
+.hero-book-container {
+    display: block;
+    margin: 0 auto;
+    padding: 25px 0;
+    justify-content: center;
+    max-width: 1024px;
+    max-height: auto;
+}
+.hero-book-image {
+    width: 33%;
+}
+.hero-book-title {
+    display: block;
+    padding-bottom: 30px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--grey-color);
+}
+.hero-book-caption {
+    font-size: 1.4rem;
+    padding-bottom: 30px;
+    color: var(--grey-color);
+}
+.hero-book-card {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.hero-book-card-left {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-book-card-left button {
+    width: 180px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: normal;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--light-green);
+    transition: all .5s;
+}
+.hero-book-card-left button:hover {
+    background-color: var(--lemon-green);
+}
+/* ---------------------------------------Books Section------------------------------------ */
+
+.books-section {
+    width: 100%;
+    max-height: auto;
+    margin-top: 20px;
+}
+.books-container-title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--grey-color);
+    margin-bottom: 15px;
+}
+.book-row {
+    display: flex;
+    justify-content: space-between;
+}
+.books-container {
+    display: block;
+    margin: 0 auto;
+    justify-content: space-around;
+    max-width: 1024px;
+    max-height: auto;
+}
+.book-card img {
+    display: block;
+    width: 80%;
+    justify-self: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: all .3s;
+}
+.book-card img:hover {
+    transform: scale(1.05);
+}
+.book-card {
+    display: block;
+    margin: 8px 0;
+    width: 220px;
+    min-height: 390px;
+    border: 1px solid #f1f1f1;
+}
+.book-title {
+    font-size: 1.6rem;
+    height: 55px;
+    font-weight: medium;
+    padding: 8px 0;
+    margin-left: 8px;
+}
+.book-price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 8px;
+    color: var(--lemon-green);
+}
+.stars-row {
+    margin-top: 5px;
+    margin-left: 8px;
+}
+.fas {
+    color: rgb(211, 155, 0);
+    transform: scale(1.4);
+    cursor: pointer;
+}
+.fa-star {
+    margin-right: 8px;
+}
+.fa-star {
+    color: rgb(211, 155, 0);
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+/* ---------------------------------------Testimonials Section------------------------------------ */
+
+.testimonials-section {
+    display: block;
+    width: 100%;
+    max-height: auto;
+    background-image: url('./images/testimonials/testimonial-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.testimonials-section::before {
+    content: "";
+    position: absolute;
+    background: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+.testimonial-container {
+    display: block;
+    position: relative;
+    width: 1024px;
+    justify-content: center;
+    margin: 15px auto;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.testimonial-caption {
+    color: white;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-bottom: 15px;
+}
+.testimonial-author {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.testimonial-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+/* ---------------------------------------Testimonials Section------------------------------------ */
+
+.footer-container {
+    display: flex;
+    width: 1024px;
+    margin: 35px auto;
+    justify-content: space-between;
+}
+.footer-first-column {
+    display: flex;
+    flex-direction: column;
+}
+.second-column {
+    display: flex;
+    flex-direction: column; 
+}
+.third-column {
+    display: flex;
+    flex-direction: column;
+}
+.four-column {
+    display: flex;
+    flex-direction: column;
+}
+.footer-four-column img {
+    width: 100px;
+}
+.column-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.footer-container p {
+    line-height: 3rem;
+}
+.footer-container a {
+    line-height: 3rem;
+    color: black;
+}
+.search-bar-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border: var(--dark-green) solid 1px;
+}
+.search-bar-container button {
+    width: 20%;
+    border-style: none;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    background-color: var(--grey-color);
+}
+.fa-paper-plane {
+    transform: scale(1.3);
+    color: white;
+}
+.search-bar-container input {
+    width: 80%;
+    padding-left: 5px;
+    border-radius: 0 20px 20px 0;
+    border-style: none;
+}
+.search-bar-container input:focus {
+    outline: none;
+}
